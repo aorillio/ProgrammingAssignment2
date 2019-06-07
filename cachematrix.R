@@ -33,19 +33,19 @@ cacheSolve <- function(x, ...) {
 
 ##Testing##
 
-> TestMatrix <- matrix(1:4, 2, 2)
+> TestMatrix <- matrix(c(1, 5, 6, 7), 2, 2)
 > TestMatrix
      [,1] [,2]
-[1,]    1    3
-[2,]    2    4
+[1,]    1    6
+[2,]    5    7
 
- CacheMatrix <- makeCacheMatrix(TestMatrix)
+> CacheMatrix <- makeCacheMatrix(TestMatrix)
 > CacheMatrix$get()
      [,1] [,2]
-[1,]    1    3
-[2,]    2    4
+[1,]    1    6
+[2,]    5    7
 
 > cacheSolve(CacheMatrix)
-     [,1] [,2]
-[1,]   -2  1.5
-[2,]    1 -0.5
+           [,1]        [,2]
+[1,] -0.3043478  0.26086957
+[2,]  0.2173913 -0.04347826
